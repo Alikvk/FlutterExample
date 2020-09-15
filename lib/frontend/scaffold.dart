@@ -21,7 +21,7 @@ class MyScaffoldWidget extends StatelessWidget {
           ),
         ],
       ),
-      body: const Center(child: Text('Dendata')),
+      body: const Center(child: Text('Dendassta')),
       bottomNavigationBar: new BottomNavigationBar(
           // Alt barı oluşturduğumuz kısım
           items: [
