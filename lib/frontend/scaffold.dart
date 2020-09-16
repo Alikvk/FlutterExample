@@ -21,7 +21,86 @@ class MyScaffoldWidget extends StatelessWidget {
           ),
         ],
       ),
-      body: const Center(child: Text('Dendassta')),
+      body: GridView.count(
+        primary: false,
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
+        crossAxisCount: 3,
+        children: <Widget>[
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.all(8),
+            child: const Text("He'd have you all unravel at the"),
+            color: Colors.teal[100],
+          ),
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.all(8),
+            child: const Text('Heed not the rabble'),
+            color: Colors.teal[200],
+          ),
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.all(8),
+            child: const Text('Sound of screams but the'),
+            color: Colors.teal[300],
+          ),
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.all(8),
+            child: const Text('Who scream'),
+            color: Colors.teal[400],
+          ),
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.all(8),
+            child: const Text('Revolution is coming...'),
+            color: Colors.teal[500],
+          ),
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.all(8),
+            child: const Text('Revolution, they...'),
+            color: Colors.teal[600],
+          ),
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.all(8),
+            child: const Text("He'd have you all unravel at the"),
+            color: Colors.teal[100],
+          ),
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.all(8),
+            child: const Text('Heed not the rabble'),
+            color: Colors.teal[200],
+          ),
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.all(8),
+            child: const Text('Sound of screams but the'),
+            color: Colors.teal[300],
+          ),
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.all(8),
+            child: const Text('Who scream'),
+            color: Colors.teal[400],
+          ),
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.all(8),
+            child: const Text('Revolution is coming...'),
+            color: Colors.teal[500],
+          ),
+          Container(
+            alignment: Alignment.center,
+            margin: const EdgeInsets.all(8),
+            child: const Text('Revolution, they...'),
+            color: Colors.teal[600],
+          ),
+        ],
+      ),
       bottomNavigationBar: new BottomNavigationBar(
           // Alt barı oluşturduğumuz kısım
           items: [
