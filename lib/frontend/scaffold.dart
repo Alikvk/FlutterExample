@@ -9,16 +9,18 @@ class MyScaffoldWidget extends StatelessWidget {
         title: const Text('AppBar Demo'),
         actions: <Widget>[
           IconButton(
-            icon: const Icon(Icons.add_alert),
-            tooltip: 'Show Snackbar',
-            onPressed: () =>
-                print('Show Snackbar'), // butona tıklandığında bu cümleyi yaz
-          ),
+              icon: const Icon(Icons.add_alert),
+              tooltip: 'firstpage',
+              onPressed: () => Navigator.pushNamed(context, '/firstpage')),
           IconButton(
-            icon: const Icon(Icons.navigate_next),
-            tooltip: 'Next page',
-            onPressed: () => print('Next Page'),
-          ),
+              icon: const Icon(Icons.navigate_before),
+              tooltip: 'statelessstatefullwidget',
+              onPressed: () =>
+                  Navigator.pushNamed(context, '/statelessstatefullwidget')),
+          IconButton(
+              icon: const Icon(Icons.navigate_next),
+              tooltip: 'hello',
+              onPressed: () => Navigator.pushNamed(context, '/hello')),
         ],
       ),
       body: GridView.count(

@@ -4,11 +4,14 @@ class Hello extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var myTextChild = new Container(
-      color: Colors.red,
+      color: Colors.white,
+      margin: const EdgeInsets.all(8),
       child: new Text(
         'Merhaba Flutter',
-        overflow: TextOverflow.ellipsis,
         textDirection: TextDirection.ltr,
+        style: TextStyle(
+          fontSize: 15,
+        ),
       ),
     );
     return Container(
@@ -24,12 +27,12 @@ class Hello extends StatelessWidget {
           alignment: Alignment.center,
           child: new Row(
             crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.start,
             mainAxisSize: MainAxisSize.max,
             textBaseline: TextBaseline.alphabetic,
             textDirection: TextDirection.ltr,
             verticalDirection: VerticalDirection.down,
-            children: <Widget>[myTextChild, myTextChild, myTextChild],
+            children: <Widget>[myTextChild, myTextChild],
           ),
         ),
       ),
