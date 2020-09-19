@@ -14,25 +14,30 @@ class Hello extends StatelessWidget {
         ),
       ),
     );
-    return Container(
-      color: Colors.green,
-      alignment: Alignment.center,
-      child: new Container(
-        margin: EdgeInsets.all(20.0),
-        padding: EdgeInsets.all(15.0),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Hello Sayfası'),
+      ),
+      body: Container(
+        color: Colors.green,
         alignment: Alignment.center,
-        color: Colors.blue,
         child: new Container(
-          color: Colors.brown,
+          margin: EdgeInsets.all(20.0),
+          padding: EdgeInsets.all(15.0),
           alignment: Alignment.center,
-          child: new Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.start,
-            mainAxisSize: MainAxisSize.max,
-            textBaseline: TextBaseline.alphabetic,
-            textDirection: TextDirection.ltr,
-            verticalDirection: VerticalDirection.down,
-            children: <Widget>[myTextChild, myTextChild],
+          color: Colors.blue,
+          child: new Container(
+            color: Colors.brown,
+            alignment: Alignment.center,
+            child: new Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.max,
+              textBaseline: TextBaseline.alphabetic,
+              textDirection: TextDirection.ltr,
+              verticalDirection: VerticalDirection.down,
+              children: <Widget>[myTextChild, myTextChild],
+            ),
           ),
         ),
       ),

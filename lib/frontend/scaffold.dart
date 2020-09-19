@@ -20,32 +20,108 @@ class MyScaffoldWidget extends StatelessWidget {
           IconButton(
               icon: const Icon(Icons.navigate_next),
               tooltip: 'hello',
-              onPressed: () => Navigator.pushNamed(context, '/firstpage')),
+              onPressed: () => Navigator.pushNamed(context, '/hello')),
         ],
       ),
       body: GridView.count(
         primary: false,
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
-        crossAxisCount: 3,
+        crossAxisCount: 2,
         children: <Widget>[
-          Container(
-            alignment: Alignment.center,
-            margin: const EdgeInsets.all(8),
-            child: const Text("He'd have you all unravel at the"),
-            color: Colors.teal[100],
+          GestureDetector(
+            onTap: () => Navigator.pushNamed(context, '/firstpage'),
+            child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                        'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bx4BSt6jniD7T0hfM01sSmRyTG8/layout_structure_regions_mobile.png'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                alignment: Alignment.bottomCenter,
+                margin: const EdgeInsets.all(8),
+                child: Transform(
+                  alignment: Alignment.bottomCenter,
+                  transform: Matrix4.skew(0, 0)..rotateZ(0.0),
+                  child: Container(
+                    width: double.infinity,
+                    color: Color(
+                      0x55FFFFFF,
+                    ), // ilk FF kısmı Transparant değer FF ile 00 arasındaki değerleri alıyor
+                    child: Text(
+                      'Tek tıklama \n First Page git',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12,
+                      ),
+                    ),
+                  ),
+                )),
           ),
-          Container(
-            alignment: Alignment.center,
-            margin: const EdgeInsets.all(8),
-            child: const Text('Heed not the rabble'),
-            color: Colors.teal[200],
+          GestureDetector(
+            onDoubleTap: () =>
+                Navigator.pushNamed(context, '/statelessstatefullwidget'),
+            child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                        'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bx4BSt6jniD7T0hfM01sSmRyTG8/layout_structure_regions_mobile.png'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                alignment: Alignment.bottomCenter,
+                margin: const EdgeInsets.all(5),
+                child: Transform(
+                  alignment: Alignment.bottomCenter,
+                  transform: Matrix4.skew(0, 0)..rotateZ(0.0),
+                  child: Container(
+                    width: double.infinity,
+                    color: Color(
+                      0x55FFFFFF,
+                    ), // ilk FF kısmı Transparant değer FF ile 00 arasındaki değerleri alıyor
+                    child: Text(
+                      'Çift Tıklama \n Stateful-Stateless Sayfasına Git',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12,
+                      ),
+                    ),
+                  ),
+                )),
           ),
-          Container(
-            alignment: Alignment.center,
-            margin: const EdgeInsets.all(8),
-            child: const Text('Sound of screams but the'),
-            color: Colors.teal[300],
+          GestureDetector(
+            onLongPress: () => Navigator.pushNamed(context, '/hello'),
+            child: Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                        'https://storage.googleapis.com/material-design/publish/material_v_11/assets/0Bx4BSt6jniD7T0hfM01sSmRyTG8/layout_structure_regions_mobile.png'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                alignment: Alignment.bottomCenter,
+                margin: const EdgeInsets.all(5),
+                child: Transform(
+                  alignment: Alignment.bottomCenter,
+                  transform: Matrix4.skew(0, 0)..rotateZ(0.0),
+                  child: Container(
+                    width: double.infinity,
+                    color: Color(
+                      0x55FFFFFF,
+                    ), // ilk FF kısmı Transparant değer FF ile 00 arasındaki değerleri alıyor
+                    child: Text(
+                      'Uzun Basma \n Hello Sayfasına Git',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12,
+                      ),
+                    ),
+                  ),
+                )),
           ),
           Container(
             alignment: Alignment.center,
